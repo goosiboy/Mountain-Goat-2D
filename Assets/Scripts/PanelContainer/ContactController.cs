@@ -17,7 +17,7 @@ public class ContactController : MonoBehaviour {
     private Event mouseEvent;
     private bool activateJump;
     public Movement movement;
-    public float _JUMPFORCE = 200.0f;
+    public float DEBUGFORCE = 200.0f;
 
     // Use this for initialization
     void Start () {
@@ -60,8 +60,7 @@ public class ContactController : MonoBehaviour {
     }
 
     public void executeJump() {
-        movement.doJump(
-            this._JUMPFORCE, 
+        movement.jumpController(
             this.initialX, 
             this.initialY, 
             this.secondX, 
